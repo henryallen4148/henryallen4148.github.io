@@ -19,8 +19,9 @@ header {
 
 .icons {
     display: flex;
-    gap: 1rem;
-    flex-shrink: 0;         /* empêche les icônes de rétrécir */
+    flex-wrap: wrap;       /* allow multiple rows if needed */
+    gap: 1rem;             /* spacing between icons */
+    justify-content: flex-start; /* or center if you want them centered */
 }
 
 .icons a img {
