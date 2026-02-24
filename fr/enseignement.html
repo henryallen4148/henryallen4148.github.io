@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Enseignement | Anonyme Anonyme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <style>
+    .lang { display: none; }
+    .lang.active { display: block; }
+
+    .language-switcher {
+      margin: 1rem;
+      text-align: right;
+    }
+    .language-switcher a {
+      margin-left: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: white;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .language-switcher a.active {
+      font-weight: bold;
+      border-color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="icons">
+      <a href="#"><img src="../images/email-icon.png" alt="Email"></a>
+      <a href="https://www.wikipedia.org/"><img src="../images/github-icon.png" alt="GitHub"></a>
+      <a href="https://www.wikipedia.org/"><img src="../images/scholar-icon.png" alt="Google Scholar"></a>
+      <a href="https://www.wikipedia.org/"><img src="../images/linkedin-icon.png" alt="LinkedIn"></a>
+    </div>
+
+    <div class="site-name">
+      Anonyme Anonyme
+    </div>
+
+    <!-- Navigation -->
+    <nav class="lang active">
+      <a href="./accueil.html">Accueil</a>
+      <a href="./presentation.html">Présentation</a>
+      <a href="./recherche.html">Recherche</a>
+      <a href="./enseignement.html" class="active">Enseignement</a>
+    </nav>
+  </header>
+
+  <!-- Language switcher -->
+  <div class="language-switcher">
+    <a href="../en/teaching.html">English</a>
+  </div>
+
+  <main>
+    <div class="content">
+      <!-- Content -->
+        <h1>Enseignement</h1>
+
+        Pendant ma thèse, je participe aux activités d'enseignement suivantes à l'École polytechnique :
+
+        <h2>2025–2026</h2>
+        <ul>
+          <li><a href="https://synapses.polytechnique.fr/catalogue/2025-2026/ue/63/APM-3F004-EP-asymptotic-statistics?from=P4826">Statistiques asymptotiques</a> : Responsable de séances de travaux dirigés (7 x 2h) et de devoirs.</li>
+          <li><a href="https://synapses.polytechnique.fr/catalogue/2025-2026/ue/270/APM-41033-EP-statistiques?from=P5205">Statistiques</a> : Tutorat (10h) et devoirs.</li>
+          <li><a href="https://synapses.polytechnique.fr/catalogue/2025-2026/ue/559/APM-51056-EP-theorie-des-probabilites-pour-le-ml-applications-aux-methodes-de-monte-carlo-et-aux-modeles-generatifs?from=D1">Théorie des probabilités pour le ML : applications aux méthodes de Monte Carlo et aux modèles génératifs</a> : Correction des travaux pratiques.</li>
+          <li>Master <a href="https://www.imo.universite-paris-saclay.fr/fr/etudiants/masters/mathematiques-et-applications/m2/mathematiques-de-laleatoire/">Mathématiques de l'aléatoire</a> : Un cours sur la stabilité pour le cours "Optimization Meets Generalization: Insights from Statistical and Neural Network Learning".</li>
+        </ul>
+    </div>
+  </main>
+</body>
+</html>
