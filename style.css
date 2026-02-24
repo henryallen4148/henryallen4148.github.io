@@ -44,6 +44,10 @@ nav {
 
 /* Liens de nav */
 nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
     white-space: nowrap;    /* empêche les mots de se couper */
 }
 
