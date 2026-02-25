@@ -22,7 +22,7 @@ header {
 }
 
 .icons {
-    margin-top: 6px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;       /* allow multiple rows if needed */
     gap: 1rem;             /* spacing between icons */
