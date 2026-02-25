@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -44,7 +48,6 @@ nav {
 
 /* Liens de nav */
 nav a {
-    margin-left: 1rem;
     text-decoration: none;
     color: #666;
     font-weight: 500;
@@ -115,6 +118,10 @@ main {
 
 /* Version mobile : stack nav sous icônes si trop petit */
 @media (max-width: 600px) {
+    main {
+        padding: 1rem; /* Less empty space on phone screens */
+    }
+
     header {
         flex-direction: column;  /* icônes + menu empilés */
         align-items: flex-start;
@@ -134,4 +141,34 @@ main {
     margin-left: 0;
     margin-top: 0.5rem; /* Optionnel, pour aérer */
 }
+}
+
+
+
+/* Hide the button on computer screens */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Update your media query */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block; /* Show the button on phones */
+    }
+    
+    #nav-menu {
+        display: none; /* Hide links by default on mobile */
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 1rem;
+    }
+
+    #nav-menu.open {
+        display: flex; /* Show links when "open" class is added */
+    }
 }
