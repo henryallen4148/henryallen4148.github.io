@@ -136,14 +136,15 @@ main {
 /* --- VERSION MOBILE --- */
 @media (max-width: 600px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row; /* Keep elements in a row */
+        flex-wrap: wrap;     /* Allow elements to wrap to the next line */
+        justify-content: space-between; /* Pushes icons to left, button to right */
+        align-items: center; /* Keeps them vertically centered */
     }
 
-    /* 1. Show the hamburger button */
     .menu-toggle {
         display: block; 
-        margin-top: 1rem;
+        margin-top: 0; /* Removed the margin so it aligns nicely with icons */
     }
 
     /* 2. Hide the nav links by default, stack them vertically */
