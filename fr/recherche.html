@@ -2,32 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Recherche | Anonyme Anonyme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Site personnel de [Votre Nom], doctorant en mathématiques appliquées au CMAP, École polytechnique.">
+  <title>Recherche | Anonymous Anonymous</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="../style.css" rel="stylesheet">
-  <style>
-    .lang { display: none; }
-    .lang.active { display: block; }
-
-    .language-switcher {
-      margin: 1rem;
-      text-align: right;
-    }
-    .language-switcher a {
-      margin-left: 0.5rem;
-      padding: 0.3rem 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background: white;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-    }
-    .language-switcher a.active {
-      font-weight: bold;
-      border-color: black;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -39,11 +18,13 @@
     </div>
 
     <div class="site-name">
-      Anonyme Anonyme
+      Anonymous Anonymous
     </div>
 
+    <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
     <!-- Navigation -->
-    <nav class="lang active">
+    <nav id="nav-menu">
       <a href="./accueil.html">Accueil</a>
       <a href="./presentation.html">Présentation</a>
       <a href="./recherche.html" class="active">Recherche</a>
@@ -60,16 +41,25 @@
     <div class="content">
       <h1>Recherche</h1>
 
-        <h2>Publications</h2>
-        <ul>
-
+      <h2>Publications</h2>
+      <ul>
         <li>
-          empty
+          Aucune publication pour le moment.
         </li>
-
-        </ul>
+      </ul>
 
     </div>
   </main>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    }
+  </script>
 </body>
 </html>

@@ -1,32 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Personal website of [Your Name], PhD student in Applied Mathematics at CMAP, Ecole polytechnique.">
-  <title>Anonyme Anonyme anglais</title>
+  <title>Home | Anonymous Anonymous</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="../style.css" rel="stylesheet">
-  <style>
-    .language-switcher {
-      margin: 1rem;
-      text-align: right;
-    }
-    .language-switcher a {
-      margin-left: 0.5rem;
-      padding: 0.3rem 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background: white;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-    }
-    .language-switcher a.active {
-      font-weight: bold;
-      border-color: black;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -37,13 +17,18 @@
       <a href="https://www.wikipedia.org/"><img src="../images/linkedin-icon.png" alt="LinkedIn"></a>
     </div>
 
+    <div class="site-name">
+      Anonymous Anonymous
+    </div>
+
     <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
 
+    <!-- Navigation -->
     <nav id="nav-menu">
-      <a href="./home.html" class="active">Accueil</a>
-      <a href="./bio.html">Présentation</a>
-      <a href="./research.html">Recherche</a>
-      <a href="./teaching.html">Enseignement</a>
+      <a href="./home.html" class="active">Home</a>
+      <a href="./bio.html">About</a>
+      <a href="./research.html">Research</a>
+      <a href="./teaching.html">Teaching</a>
     </nav>
   </header>
 
@@ -55,24 +40,23 @@
   <main>
     <div class="content">
       <!-- Content -->
-        <h1>Anonyme Anonyme anglais</h1>
-         <br>
-
-        <p>Depuis septembre 2025, je suis doctorant au <a href="https://cmap.ip-paris.fr/">CMAP</a>, à l'École polytechnique, sous la direction d'<a href="https://www.wikipedia.org/">Anonyme Anonyme</a> et de <a href="https://www.wikipedia.org/">Anonyme Anonyme</a>.</p>
-        <p> Je travaille actuellement sur l'apprentissage décentralisé (Decentralized Learning) et je m'intéresse plus largement à l'apprentissage automatique (Machine Learning), à l'optimisation, à l'apprentissage statistique, etc.</p>
+        <p> Since September 2025, I am a PhD student at the <a href="https://cmap.ip-paris.fr/">CMAP</a>, École polytechnique, under the supervision of <a href="https://www.wikipedia.org/">Anonyme Anonyme</a> and <a href="https://www.wikipedia.org/">Anonyme Anonyme</a>.</p>
+        <p> I am currently working on decentralized learning (Decentralized Learning) and am broadly interested in machine learning, optimization, statistical learning, etc.</p>
         <br>
 
-        <p>Avant cela, j'ai été diplômé de l'École polytechnique en 2025 avec une spécialisation en mathématiques appliquées. En parallèle, j'ai également obtenu le <a href="https://www.master-mva.com">Master MVA</a>.</p>  
+        <p>Before that, I graduated from École polytechnique in 2025 with a specialization in applied mathematics. In parallel, I also obtained the <a href="https://www.master-mva.com">Master MVA</a>.</p>  
     </div>
   </main>
 
   <script>
-      const toggle = document.querySelector('.menu-toggle');
-      const menu = document.getElementById('nav-menu');
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
 
-      toggle.addEventListener('click', () => {
-          menu.classList.toggle('open');
-      });
+    if (toggle && menu) { // Added a safety check!
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    }
   </script>
 </body>
 </html>

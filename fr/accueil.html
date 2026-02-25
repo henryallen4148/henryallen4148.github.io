@@ -2,29 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Anonyme Anonyme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Site personnel de [Votre Nom], doctorant en mathématiques appliquées au CMAP, École polytechnique.">
+  <title>Accueil | Anonymous Anonymous</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
   <link href="../style.css" rel="stylesheet">
-  <style>
-    .language-switcher {
-      margin: 1rem;
-      text-align: right;
-    }
-    .language-switcher a {
-      margin-left: 0.5rem;
-      padding: 0.3rem 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background: white;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-    }
-    .language-switcher a.active {
-      font-weight: bold;
-      border-color: black;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -35,8 +18,14 @@
       <a href="https://www.wikipedia.org/"><img src="../images/linkedin-icon.png" alt="LinkedIn"></a>
     </div>
 
+    <div class="site-name">
+      Anonymous Anonymous
+    </div>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
     <!-- Navigation -->
-    <nav class="lang active">
+    <nav id="nav-menu">
       <a href="./accueil.html" class="active">Accueil</a>
       <a href="./presentation.html">Présentation</a>
       <a href="./recherche.html">Recherche</a>
@@ -52,15 +41,23 @@
   <main>
     <div class="content">
       <!-- Content -->
-        <h1>Anonyme Anonyme</h1>
-         <br>
-
-        <p>Depuis septembre 2025, je suis doctorant au <a href="https://cmap.ip-paris.fr/">CMAP</a>, à l'École polytechnique, sous la direction d'<a href="https://www.wikipedia.org/">Anonyme Anonyme</a> et de <a href="https://www.wikipedia.org/">Anonyme Anonyme</a>.</p>
-        <p> Je travaille actuellement sur l'apprentissage décentralisé (Decentralized Learning) et je m'intéresse plus largement à l'apprentissage automatique (Machine Learning), à l'optimisation, à l'apprentissage statistique, etc.</p>
+        <p>Depuis septembre 2025, je suis doctorant au <a href="https://cmap.ip-paris.fr/">CMAP</a>, École polytechnique, sous la direction de <a href="https://www.wikipedia.org/">Anonyme Anonyme</a> et <a href="https://www.wikipedia.org/">Anonyme Anonyme</a>.</p>
+        <p>Je travaille actuellement sur l’apprentissage décentralisé (Decentralized Learning) et m’intéresse plus largement à l’apprentissage automatique, l’optimisation, l’apprentissage statistique, etc.</p>
         <br>
 
-        <p>Avant cela, j'ai été diplômé de l'École polytechnique en 2025 avec une spécialisation en mathématiques appliquées. En parallèle, j'ai également obtenu le <a href="https://www.master-mva.com">Master MVA</a>.</p>  
+        <p>Auparavant, j’ai été diplômé de l’École polytechnique en 2025 avec une spécialisation en mathématiques appliquées. En parallèle, j’ai également obtenu le <a href="https://www.master-mva.com">Master MVA</a>.</p>  
     </div>
   </main>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    }
+  </script>
 </body>
 </html>

@@ -41,6 +41,25 @@ header {
     margin-left: 1.5rem;
 }
 
+.language-switcher {
+    margin: 1rem;
+    text-align: right;
+}
+.language-switcher a {
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.language-switcher a.active {
+    font-weight: bold;
+    border-color: black;
+}
+
 /* Liens de nav */
 
 nav a.active {

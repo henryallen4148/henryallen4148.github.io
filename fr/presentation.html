@@ -2,29 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Présentation | Anonyme Anonyme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Site personnel de [Votre Nom], doctorant en mathématiques appliquées au CMAP, École polytechnique.">
+  <title>Présentation | Anonymous Anonymous</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="../style.css" rel="stylesheet">
-  <style>
-    .language-switcher {
-      margin: 1rem;
-      text-align: right;
-    }
-    .language-switcher a {
-      margin-left: 0.5rem;
-      padding: 0.3rem 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background: white;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-    }
-    .language-switcher a.active {
-      font-weight: bold;
-      border-color: black;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -36,11 +18,13 @@
     </div>
 
     <div class="site-name">
-      Anonyme Anonyme
+      Anonymous Anonymous
     </div>
 
+    <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
     <!-- Navigation -->
-    <nav class="lang active">
+    <nav id="nav-menu">
       <a href="./accueil.html">Accueil</a>
       <a href="./presentation.html" class="active">Présentation</a>
       <a href="./recherche.html">Recherche</a>
@@ -55,17 +39,27 @@
 
   <main>
     <div class="content">
-      <!-- Content -->
-        <h1>Présentation</h1>
+      <h1>Présentation</h1>
 
-        <p>J'ai débuté ma thèse en septembre 2025 au <a href="https://cmap.ip-paris.fr/">CMAP</a>, à l'École polytechnique, sous la direction d'<a href="https://www.wikipedia.org/">Anonyme Anonyme</a> et de <a href="https://www.wikipedia.org/">Anonyme Anonyme</a>.</p>
+      <p>J’ai commencé ma thèse en septembre 2025 au <a href="https://cmap.ip-paris.fr/">CMAP</a>, École polytechnique, sous la direction de <a href="https://www.wikipedia.org/">Anonyme Anonyme</a> et <a href="https://www.wikipedia.org/">Anonyme Anonyme</a>.</p>
 
-        <p> Auparavant, j'ai été diplômé de l'École polytechnique en 2025 avec une spécialisation en mathématiques appliquées. En parallèle, j'ai également obtenu le <a href="https://www.master-mva.com">Master MVA</a>.</p>
+      <p>Auparavant, j’ai été diplômé de l’École polytechnique en 2025 avec une spécialisation en mathématiques appliquées. En parallèle, j’ai également obtenu le <a href="https://www.master-mva.com">Master MVA</a>.</p>
 
-        <p>Durant mes études, je me suis principalement concentré sur les mathématiques appliquées (notamment l'optimisation, l'apprentissage automatique, les probabilités et les statistiques) et l'informatique (y compris l'algorithmique, la théorie du calcul, l'apprentissage automatique et l'apprentissage profond).</p>
+      <p>Au cours de mes études, je me suis principalement concentré sur les mathématiques appliquées (notamment l’optimisation, l’apprentissage automatique, les probabilités et les statistiques) ainsi que sur l’informatique (y compris l’algorithmique, la théorie du calcul, l’apprentissage automatique et l’apprentissage profond).</p>
 
-        <p>Pour plus de détails, voir ...</p>
+      <p>Pour plus de détails, voir …</p>
     </div>
   </main>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    }
+  </script>
 </body>
 </html>
