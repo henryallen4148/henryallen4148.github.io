@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website of [Your Name], PhD student in Applied Mathematics at CMAP, Ecole polytechnique.">
   <title>Anonyme Anonyme anglais</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="../style.css" rel="stylesheet">
@@ -37,11 +38,19 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="lang active">
+    <nav>
       <a href="./home.html" class="active">Accueil</a>
       <a href="./bio.html">Présentation</a>
       <a href="./research.html">Recherche</a>
       <a href="./teaching.html">Enseignement</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+    <nav id="nav-menu">
+        <a href="./home.html" class="active">Accueil</a>
+        <a href="./bio.html">Présentation</a>
+        <a href="./research.html">Recherche</a>
+        <a href="./teaching.html">Enseignement</a>
     </nav>
   </header>
 
@@ -63,5 +72,14 @@
         <p>Avant cela, j'ai été diplômé de l'École polytechnique en 2025 avec une spécialisation en mathématiques appliquées. En parallèle, j'ai également obtenu le <a href="https://www.master-mva.com">Master MVA</a>.</p>  
     </div>
   </main>
+
+  <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('nav-menu');
+
+      toggle.addEventListener('click', () => {
+          menu.classList.toggle('open');
+      });
+  </script>
 </body>
 </html>
